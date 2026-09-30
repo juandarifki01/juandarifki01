@@ -1,0 +1,129 @@
+/* ===== Journey: timeline ===== */
+.tl {
+  position: relative;
+  padding-left: 2rem;
+  display: grid;
+  gap: 1.8rem;
+}
+.tl:before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--gold);
+}
+.tl .it {
+  position: relative;
+}
+.tl .it:before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.45rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--choc);
+  border: 3px solid var(--gold);
+}
+.tl .it.now:before {
+  background: var(--terra);
+}
+.tl small {
+  color: var(--terra);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.tl .cap {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--mocha);
+  margin-top: 0.5rem;
+}
+
+/* ===== Journey: kolom kanan ===== */
+.side {
+  display: grid;
+  gap: 1.5rem;
+}
+.card .quote {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--choc);
+  margin: 0.4rem 0 0.8rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--gold);
+}
+.vals {
+  margin-top: 1.2rem;
+  display: grid;
+}
+.vals div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--beige);
+}
+.vals dt {
+  font-weight: 600;
+  color: var(--choc);
+}
+.vals dd {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.note {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+.path {
+  list-style: none;
+  display: grid;
+  margin-top: 0.6rem;
+}
+.path li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--beige);
+}
+.path .p-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+.path b {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--choc);
+  font-weight: 700;
+}
+.path .p-head span {
+  font-size: 0.85rem;
+  color: var(--terra);
+  font-weight: 500;
+}
+.path p {
+  font-size: 0.95rem;
+}
+.path li.soft b {
+  font-weight: 500;
+}
+.path li.soft p {
+  font-size: 0.92rem;
+}
+
+@media (max-width: 520px) {
+  .vals div {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+  .path .p-head {
+    flex-direction: column;
+    gap: 0;
+  }
+}
